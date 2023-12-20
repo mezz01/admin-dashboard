@@ -1,16 +1,15 @@
 import Navbar from "../ui/dashboard/navbar/navbar"
 import Sidebar from "../ui/dashboard/sidebar/sidebar"
+import styles from "../ui/dashboard/dashboard.css"
 
 const Layout = ({children}) => {
 	return (
-	  <div>
-		<div>
+	  <div className={styles.container}>
+		<div className={styles.menu}>
 			<Sidebar></Sidebar>
 		</div>
-		<div>
+		<div className={styles.content}> 
 			<Navbar></Navbar>
-		</div>
-		<div>
 			{children}
 		</div>
 	  </div>
